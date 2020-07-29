@@ -1,0 +1,68 @@
+body {
+	background: url(./../img/pattern.jpg);
+	margin: 0;
+}
+
+header {
+	background: white;
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+header img {
+	float: left;
+}
+
+header nav {
+	float: right;
+}
+
+ul {
+	display: flex;
+}
+
+li {
+	display: flex;
+	margin-right: 10px;
+}
+
+h1 {
+	text-align: center;
+}
+
+a {
+	text-decoration: none;
+}
+
+article {
+	border-bottom: 1px solid black;
+}
+
+section {
+	background: white;
+	margin-top: 30px;
+	margin-right: 100px;
+	margin-left: 100px;
+	padding-right: 100px;
+	padding-left: 100px;
+	border-bottom: none;
+}
+
+footer {
+	background: black;
+	bottom: 0;
+	width: 100%;
+	padding: 1px;
+	color: white;
+	text-align: center;
+	position: relative;
+}
+
+
+
+
+
+
+
+
