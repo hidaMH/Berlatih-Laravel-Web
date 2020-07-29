@@ -16,4 +16,4 @@ echo cari_mean([7, 7, 7, 7, 7]); // 7
 
 ?>
 
-//mencari mean
+
