@@ -1,6 +1,16 @@
 <?php
 function tukar_besar_kecil($string){
 //kode di sini
+	$arrString = str_split($string);
+    $result = [];
+    foreach ($arrString as $huruf) {
+        if ( $huruf == strtoupper($huruf)) {
+            array_push($result, strtolower($huruf));
+        } else {
+            array_push($result, strtoupper($huruf));
+        }
+    }
+    return implode($result) . "<br>";
 }
 
 // TEST CASES

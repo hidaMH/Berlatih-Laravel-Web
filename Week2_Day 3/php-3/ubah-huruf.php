@@ -1,6 +1,17 @@
 <?php
 function ubah_huruf($string){
 //kode di sini
+	$result = [];
+    $abjad = range('a', 'z');
+    $arrString = str_split($string);
+    for($i=0; $i<count($arrString); $i++){
+        for($j=0; $j<count($abjad); $j++){
+            if ($arrString[$i]==$abjad[$j]) {
+                array_push($result, $abjad[$j+1]);
+            }
+        }
+    }
+    return implode($result) . "<br>";
 }
 
 // TEST CASES
