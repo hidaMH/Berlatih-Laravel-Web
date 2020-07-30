@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 
 function palindrome_angka($angka) {
@@ -21,3 +22,28 @@ echo "<br>" . palindrome_angka(175); // 181
 echo "<br>" . palindrome_angka(1000); // 1001
 
 ?>
+=======
+<?php
+
+function palindrome_angka($angka) {
+  // tulis kode di sini
+  if ($angka >= 0 && $angka < 9) {
+        return $angka+1;
+    } else {
+        for($i=$angka+1; $i<=1000000; $i++) {
+            if ($i == (int)strrev(implode(str_split(strval($i), 1)))) {
+                return $i;
+            } 
+        }
+    }
+}
+
+// TEST CASES
+echo palindrome_angka(8) // 9
+echo palindrome_angka(10); // 11
+echo palindrome_angka(117); // 121
+echo palindrome_angka(175); // 181
+echo palindrome_angka(1000); // 1001
+
+?>
+>>>>>>> ef496ad59afe1231beb8a6a99734e5b8de1e4513

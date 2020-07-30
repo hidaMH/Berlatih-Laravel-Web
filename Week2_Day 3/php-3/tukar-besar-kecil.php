@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 function tukar_besar_kecil($string){
 //kode di sini
@@ -20,4 +21,28 @@ echo tukar_besar_kecil('My Name is Bond!!'); // "mY nAME IS bOND!!"
 echo tukar_besar_kecil('IT sHOULD bE me'); // "it Should Be ME"
 echo tukar_besar_kecil('001-A-3-5TrdYW'); // "001-a-3-5tRDyw"
 
+=======
+<?php
+function tukar_besar_kecil($string){
+//kode di sini
+	$arrString = str_split($string);
+    $result = [];
+    foreach ($arrString as $huruf) {
+        if ( $huruf == strtoupper($huruf)) {
+            array_push($result, strtolower($huruf));
+        } else {
+            array_push($result, strtoupper($huruf));
+        }
+    }
+    return implode($result) . "<br>";
+}
+
+// TEST CASES
+echo tukar_besar_kecil('Hello World'); // "hELLO wORLD"
+echo tukar_besar_kecil('I aM aLAY'); // "i Am Alay"
+echo tukar_besar_kecil('My Name is Bond!!'); // "mY nAME IS bOND!!"
+echo tukar_besar_kecil('IT sHOULD bE me'); // "it Should Be ME"
+echo tukar_besar_kecil('001-A-3-5TrdYW'); // "001-a-3-5tRDyw"
+
+>>>>>>> ef496ad59afe1231beb8a6a99734e5b8de1e4513
 ?>
