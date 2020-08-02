@@ -1,0 +1,62 @@
+============== Hari 5 - Berlatih SQL ==============
+
+===== Nomor 1. =====
+
+CREATE DATABASE myshop
+
+===== Nomor 2. =====
+
+CREATE TABLE users (
+id INT PRIMARY KEY AUTO_INCREMENT,
+name VARCHAR(255),
+email VARCHAR(255),
+password VARCHAR(255)
+);
+
+CREATE TABLE categories (
+id INT PRIMARY KEY AUTO_INCREMENT,
+name VARCHAR(255)
+);
+
+CREATE TABLE items (
+id INT PRIMARY KEY AUTO_INCREMENT,
+name VARCHAR(255),
+description VARCHAR(255),
+price INT,
+stok INT,
+category_id INT,
+CONSTRAINT category_id FOREIGN KEY (category_id) REFERENCES categories (id)
+);
+
+===== Nomor 3. =====
+
+INSERT INTO users (NAME, email, PASSWORD)
+VALUES ('John Doe' , 'john@doe.com' , 'john123'), ('Jane Doe', 'jane@doe.com', 'jenita123')
+
+INSERT INTO categories (NAME)
+VALUES ('gadget'), ('cloth'), ('men'), ('women'), ('branded')
+
+INSERT INTO items (NAME, description, price, stok, category_id)
+VALUES ('Sumsang b50' , 'hape keren dari merek sumsang' , '4000000', '100', 1), 
+('Uniklooh', 'baju keren dari brand ternama', '500000', '50', 2),
+('IMHO Watch', 'jam tangan anak yang jujur banget', '2000000', '10', 1)
+
+===== Nomor 4. =====
+
+== a. ==
+SELECT NAME, email FROM users;
+
+== b. ==
+SELECT * FROM items WHERE price > '1000000';
+
+SELECT * FROM items WHERE name LIKE '%watch%';
+
+== c. ==
+SELECT items.name, items.description, items.price, items.stok, items.category_id, categories.name 
+FROM items, categories
+WHERE items.category_id=categories.id;
+
+===== Nomor 5. =====
+UPDATE items SET price = '2500000' WHERE NAME = 'Sumsang b50';
+
+
