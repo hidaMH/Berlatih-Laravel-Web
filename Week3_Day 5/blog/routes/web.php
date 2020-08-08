@@ -20,5 +20,27 @@ Route::get('/', function () {
     return "Hello Laravel";
 });*/
 
-Route::get('/home','HomeController');
-Route::get('/form','AuthController');
+// Route::get('/', function () {
+//     return view('adminlte/master');
+// });
+
+// Route::get('/items', function(){
+//     return view('items.index');
+// });
+
+// Route::get('/items/create', function(){
+//     return view('items.create');
+// });
+
+// Route::get('/', function(){
+//     return view('tugas2/index');
+// });
+
+// Route::get('/data-tables', function(){
+//     return view('tugas2/data-tables');
+// });
+
+Route::get('/', 'PertanyaanController@index');
+Route::get('/crud/create', 'PertanyaanController@create');
+
+
